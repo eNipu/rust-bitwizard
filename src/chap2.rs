@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub mod chap2 {
     use rand::Rng;
     use std::cmp::Ordering;
