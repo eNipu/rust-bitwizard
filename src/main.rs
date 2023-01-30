@@ -9,6 +9,7 @@ use crate::chap3::*;
 
 fn main() {
     // guess_game();
-    shadowing();
-    math_operation();
+    // shadowing();
+    // math_operation();
+    compount_types();
 }
