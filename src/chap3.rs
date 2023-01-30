@@ -1,3 +1,5 @@
+use std::io;
+
 #[allow(dead_code)]
 pub fn variables() {
     let x = 5;
@@ -96,4 +98,36 @@ pub fn compount_types() {
 
     let a = [2; 4];
     println!("The value of a is: {:?}",a);
+}
+
+
+pub fn access_array() {
+    let a = [1, 2, 3, 4, 5];
+
+    println!("Please enter an array index.");
+
+    let mut index = String::new();
+
+    io::stdin()
+        .read_line(&mut index)
+        .expect("Failed to read line");
+
+    let index: usize = index
+        .trim()
+        .parse()
+        .expect("Index entered was not a number");
+
+    let element = a[index];
+
+    println!("The value of the element at index {index} is: {element}");
+}
+
+#[allow(dead_code)]
+pub fn functions() {
+    let x = 5;
+    let y = {
+        let x = 3;
+        x + 1
+    };
+    println!("The value of y is: {y}");
 }

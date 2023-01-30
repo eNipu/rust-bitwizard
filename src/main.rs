@@ -11,5 +11,7 @@ fn main() {
     // guess_game();
     // shadowing();
     // math_operation();
-    compount_types();
+    // compount_types();
+    access_array();
+    functions();
 }
