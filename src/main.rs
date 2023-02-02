@@ -12,6 +12,7 @@ fn main() {
     // shadowing();
     // math_operation();
     // compount_types();
-    access_array();
-    functions();
+    // access_array();
+    // functions();
+    return_value_from_loop();
 }

@@ -131,3 +131,38 @@ pub fn functions() {
     };
     println!("The value of y is: {y}");
 }
+
+pub fn statements_and_expressions() {
+    // Statements are instructions that perform some action and do not return a value.
+    // Expressions evaluate to a resulting value.
+    // let y = (let x = 6); // not allowed
+    let x = 5;
+    let y = {
+        let x = 3;
+        x + 1
+    };
+    println!("The value of y is: {y}");
+}
+
+pub fn functions_with_return_values() -> i32 {
+    let x = 5;
+    let y = {
+        let x = 3;
+        x + 1
+    };
+    println!("The value of y is: {y}");
+    y
+}
+
+#[allow(dead_code)]
+pub fn return_value_from_loop() -> i32 {
+    let mut counter = 0;
+    let result = loop {
+        counter += 1;
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+    println!("The value of result is: {result}");
+    result
+}
