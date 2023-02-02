@@ -97,9 +97,8 @@ pub fn compount_types() {
     println!("The value of jan is: {jan}");
 
     let a = [2; 4];
-    println!("The value of a is: {:?}",a);
+    println!("The value of a is: {:?}", a);
 }
-
 
 pub fn access_array() {
     let a = [1, 2, 3, 4, 5];
@@ -165,4 +164,27 @@ pub fn return_value_from_loop() -> i32 {
     };
     println!("The value of result is: {result}");
     result
+}
+
+#[allow(dead_code)]
+pub fn loop_label() {
+    let mut count = 0;
+    'counting_up: loop {
+        println!("count = {count}");
+        let mut remaining = 10;
+
+        loop {
+            println!("remaining = {remaining}");
+            if remaining == 9 {
+                break;
+            }
+            if count == 2 {
+                break 'counting_up;
+            }
+            remaining -= 1;
+        }
+
+        count += 1;
+    }
+    println!("End count = {count}");
 }
