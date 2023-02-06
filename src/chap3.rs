@@ -100,6 +100,7 @@ pub fn compount_types() {
     println!("The value of a is: {:?}", a);
 }
 
+#[allow(dead_code)]
 pub fn access_array() {
     let a = [1, 2, 3, 4, 5];
 
@@ -131,6 +132,7 @@ pub fn functions() {
     println!("The value of y is: {y}");
 }
 
+#[allow(dead_code)]
 pub fn statements_and_expressions() {
     // Statements are instructions that perform some action and do not return a value.
     // Expressions evaluate to a resulting value.
@@ -143,6 +145,7 @@ pub fn statements_and_expressions() {
     println!("The value of y is: {y}");
 }
 
+#[allow(dead_code)]
 pub fn functions_with_return_values() -> i32 {
     let x = 5;
     let y = {
@@ -189,7 +192,6 @@ pub fn loop_label() {
     println!("End count = {count}");
 }
 
-
 #[allow(dead_code)]
 pub fn count_down() {
     let mut count = 3;
@@ -202,7 +204,7 @@ pub fn count_down() {
     let a = [10, 20, 30, 40, 50];
     let mut index = 0;
     while index < 5 {
-        println!("the value is: {}",a[index]);
+        println!("the value is: {}", a[index]);
         index += 1;
     }
 
@@ -213,5 +215,4 @@ pub fn count_down() {
     for number in (1..4).rev() {
         println!("{}!", number);
     }
-
 }
